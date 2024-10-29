@@ -57,4 +57,3 @@ default_kscan: kscan {
     prechargep = <0x22>;
   };
 };
-

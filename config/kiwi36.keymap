@@ -97,7 +97,12 @@ behaviours {
             bindings = <&kp APOS>, <&kp DQT>;
         };
 
-        
+td12: tap_dance_12 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp PIPE>, <&kp BSLH>;
+        };
 
     soft_off {
             hold-time-ms = <5000>; // Only turn off it the key is held for 5 seconds or longer.
@@ -146,7 +151,7 @@ lower_layer {
 
     &td1             &td2        &td3      &td4          &td5                                  &td6             &td7              &td8             &td9            &td10   
     &kp TAB          &none       &none     &kp PSCRN     &kp CAPS                              &kp MINUS        &kp EQUAL         &kp LBKT         &kp RBKT        &td11  
-    &none            &none       &none     &none         &none                                 &kp UNDER        &kp PLUS          &kp LBRC         &kp RBRC        &kp PIPE
+    &none            &none       &none     &none         &none                                 &kp UNDER        &kp PLUS          &kp LBRC         &kp RBRC        &td12
                                  &kp LGUI  &mo 1         &kp RET                               &kp RET          &mo 2             &kp RALT
     >;
     };
@@ -173,4 +178,4 @@ display-name = "UPPER";
 };
 
 };
-};/
+};

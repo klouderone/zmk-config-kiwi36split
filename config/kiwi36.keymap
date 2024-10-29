@@ -170,7 +170,7 @@ display-name = "UPPER";
 
     bindings = <
 
-    &soft_off    &none            &none            &ext_power EP_ON  &ext_power EP_OFF                &none      &none     &kp UP        &none        &kp    
+    &soft_off    &none            &none            &ext_power EP_ON  &ext_power EP_OFF                &none      &none     &kp UP        &none        &none   
     &bt BT_CLR   &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2      &none                            &kp HOME   &kp LEFT  &kp DOWN      &kp RIGHT    &none   
     &none        &none            &none            &none             &none                            &none      &none     &none         &kp END      &none   
                                   &kp LGUI         &mo 1             &kp RET                          &kp RET    &mo 2     &kp RALT

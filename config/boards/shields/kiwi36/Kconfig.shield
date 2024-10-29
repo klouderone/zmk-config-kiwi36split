@@ -1,0 +1,5 @@
+config SHIELD_KIWI36_LEFT
+def_bool $(shields_list_contains,kiwi36_left)
+
+config SHIELD_KIWI36_RIGHT
+def_bool $(shields_list_contains,kiwi36_right)

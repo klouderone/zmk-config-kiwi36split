@@ -163,19 +163,22 @@ display-name = "UPPER";
 // ---------------------------------   ----------------------------------------------
 // |  CLR  | bt1 | bt2 | bt3 |     |   |  HOME  |  LEFT   |  DOWN  |  RIGHT  |      |
 // ---------------------------------   ----------------------------------------------
-// |       |     |     |     |     |   |        |         |        |   END   |      |
+// | stdulk|     |     |     |     |   |        |         |        |   END   |      |
 // ---------------------------------   ----------------------------------------------
 //               | GUI | LWR | SPC |   | ENT | RSE  | ALT | 
 //               -------------------   --------------------
 
     bindings = <
 
-    &soft_off    &none            &none            &ext_power EP_ON  &ext_power EP_OFF                &none      &none     &kp UP        &none        &none   
-    &bt BT_CLR   &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2      &none                            &kp HOME   &kp LEFT  &kp DOWN      &kp RIGHT    &none   
-    &none        &none            &none            &none             &none                            &none      &none     &none         &kp END      &none   
-                                  &kp LGUI         &mo 1             &kp RET                          &kp RET    &mo 2     &kp RALT
+    &soft_off       &none            &none            &ext_power EP_ON  &ext_power EP_OFF                &none      &none     &kp UP        &none        &none   
+    &bt BT_CLR      &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2      &none                            &kp HOME   &kp LEFT  &kp DOWN      &kp RIGHT    &none   
+    &studio_unlock  &none            &none            &none             &none                            &none      &none     &none         &kp END      &none   
+                                     &kp LGUI         &mo 1             &kp RET                          &kp RET    &mo 2     &kp RALT
     >;
-};
+    };
 
+extra1 {
+    status = "reserved";
+};
 };
 };

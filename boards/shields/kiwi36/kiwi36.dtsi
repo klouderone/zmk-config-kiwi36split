@@ -4,7 +4,7 @@
 / {
     chosen {
         zephyr,display = &oled;
-        zmk,kscan = &default_kscan;
+        zmk,kscan = &kiwi36_kscan;
         zmk,matrix_transform = &default_transform;
     };
 

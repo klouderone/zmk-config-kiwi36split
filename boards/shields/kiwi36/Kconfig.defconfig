@@ -26,6 +26,8 @@ config BT_MAX_PAIRED
 
 endif
 
+
+
 if SHIELD_KIWI36_LEFT || SHIELD_KIWI36_RIGHT || SHIELD_KIWI36_DONGLE 
 
 config ZMK_SPLIT
@@ -35,6 +37,8 @@ config ZMK_BLE
 default y
 
 endif 
+
+
 
 if ZMK_DISPLAY
 
@@ -57,6 +61,7 @@ config SSD1306_REVERSE_MODE
 
 endif # ZMK_DISPLAY
 
+
 if LVGL
 
 config LV_Z_VDB_SIZE
@@ -75,4 +80,3 @@ endchoice
 
 endif # LVGL
 
-endif

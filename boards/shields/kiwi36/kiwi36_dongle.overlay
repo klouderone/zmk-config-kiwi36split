@@ -1,81 +1,8 @@
-#include <dt-bindings/zmk/matrix_transform.h>
+/*
+ * Copyright (c) 2020 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
 
-/ {
-    chosen {
-        zmk,kscan = &mock_kscan;
-        zmk,physical-layout = &physical_layout0;
-    };
+#include "kiwi36.dtsi"
 
-    physical_layout0: physical_layout_0 {
-        compatible = "zmk,physical-layout";
-        display-name = "Default";
-
-        kscan = <&kscan>;
-        transform = <&default_transform>;
-
-        keys  //                     w   h    x    y     rot    rx    ry
-            = <&key_physical_attrs 100 100    0   95       0     0     0>
-            , <&key_physical_attrs 100 100  100   32       0     0     0>
-            , <&key_physical_attrs 100 100  200    0       0     0     0>
-            , <&key_physical_attrs 100 100  300   34       0     0     0>
-            , <&key_physical_attrs 100 100  400   47       0     0     0>
-            , <&key_physical_attrs 100 100  800   47       0     0     0>
-            , <&key_physical_attrs 100 100  900   34       0     0     0>
-            , <&key_physical_attrs 100 100 1000    0       0     0     0>
-            , <&key_physical_attrs 100 100 1100   32       0     0     0>
-            , <&key_physical_attrs 100 100 1200   95       0     0     0>
-            , <&key_physical_attrs 100 100    0  195       0     0     0>
-            , <&key_physical_attrs 100 100  100  132       0     0     0>
-            , <&key_physical_attrs 100 100  200  100       0     0     0>
-            , <&key_physical_attrs 100 100  300  134       0     0     0>
-            , <&key_physical_attrs 100 100  400  147       0     0     0>
-            , <&key_physical_attrs 100 100  800  147       0     0     0>
-            , <&key_physical_attrs 100 100  900  134       0     0     0>
-            , <&key_physical_attrs 100 100 1000  100       0     0     0>
-            , <&key_physical_attrs 100 100 1100  132       0     0     0>
-            , <&key_physical_attrs 100 100 1200  195       0     0     0>
-            , <&key_physical_attrs 100 100    0  295       0     0     0>
-            , <&key_physical_attrs 100 100  100  232       0     0     0>
-            , <&key_physical_attrs 100 100  200  200       0     0     0>
-            , <&key_physical_attrs 100 100  300  234       0     0     0>
-            , <&key_physical_attrs 100 100  400  247       0     0     0>
-            , <&key_physical_attrs 100 100  800  247       0     0     0>
-            , <&key_physical_attrs 100 100  900  234       0     0     0>
-            , <&key_physical_attrs 100 100 1000  200       0     0     0>
-            , <&key_physical_attrs 100 100 1100  232       0     0     0>
-            , <&key_physical_attrs 100 100 1200  295       0     0     0>
-            , <&key_physical_attrs 100 100  238  334       0     0     0>
-            , <&key_physical_attrs 100 100  349  348    1500   399   398>
-            , <&key_physical_attrs 150 100  453  392 (-6000)   503   442>
-            , <&key_physical_attrs 100 100  961  334       0     0     0>
-            , <&key_physical_attrs 100 100  850  348 (-1500)   899   398>
-            , <&key_physical_attrs 150 100  721  348    6000   771   398>
-            ;
-    };
-
-    mock_kscan: mock_kscan_0 {
-        compatible = "zmk,kscan-mock";
-        columns = <0>;
-        rows = <0>;
-        events = <0>;
-    };
-
-    default_transform: matrix_transform {
-        compatible = "zmk,matrix-transform";
-        columns = <10>;
-        rows = <4>; 
-
- //         | SW1  | SW2   | SW3   | SW4   | SW5  |    | SW23  | SW22  | SW21 | SW20  | SW19  |
- //         | SW6  | SW7   | SW8   | SW9   | SW10 |    | SW28  | SW27  | SW26 | SW25  | SW24  |
- //         | SW11 | SW12  | SW13  | SW14  | SW15 |    | SW33  | SW32  | SW31 | SW30  | SW19  |
- //                        | SW16  | SW17  | SW18 |    | SW36  | SW35  | SW34 |
-       
-        map = < 
-            RC(0,0) RC(0,1) RC(0,2) RC(0,3) RC(0,4)     RC(0,5) RC(0,6) RC(0,7) RC(0,8) RC(0,9) 
-            RC(1,0) RC(1,1) RC(1,2) RC(1,3) RC(1,4)     RC(1,5) RC(1,6) RC(1,7) RC(1,8) RC(1,9) 
-            RC(2,0) RC(2,1) RC(2,2) RC(2,3) RC(2,4)     RC(2,5) RC(2,6) RC(2,7) RC(2,8) RC(2,9) 
-                            RC(3,2) RC(3,3) RC(3,4)     RC(3,5) RC(3,6) RC(3,7)
-    >;
-};
-
-};

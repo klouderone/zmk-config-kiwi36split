@@ -31,7 +31,7 @@
         >;
         
     };
-    mock_kscan: kscan0 {
+    mock_kscan: kscan {
         compatible = "zmk,kscan-mock";
         columns = <0>;
         rows = <0>;

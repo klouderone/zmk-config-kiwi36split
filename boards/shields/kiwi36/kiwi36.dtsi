@@ -56,5 +56,5 @@
  //  segment-remap;
  //  com-sequential;
  //   prechargep = <0x22>;
-};
-};
+//};
+//};

@@ -1,6 +1,12 @@
 #include <dt-bindings/zmk/matrix_transform.h>
 #include "kiwi36-layouts.dtsi"
 
+
+&physical_layout0 {
+    transform = <&default_transform>;
+    // zmk,kscan = &kscan;
+};
+
 / {
     chosen {
        //  zephyr,display = &oled;
@@ -36,6 +42,12 @@
                     <&pro_micro 5 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>, 
                     <&pro_micro 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>, 
                     <&pro_micro 7 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
+
+        col-gpios = <&pro_micro 14 GPIO_ACTIVE_HIGH>,
+                    <&pro_micro 15 GPIO_ACTIVE_HIGH>,
+                    <&pro_micro 18 GPIO_ACTIVE_HIGH>,
+                    <&pro_micro 19 GPIO_ACTIVE_HIGH>, 
+                    <&pro_micro 20 GPIO_ACTIVE_HIGH>;
 
    };
 };

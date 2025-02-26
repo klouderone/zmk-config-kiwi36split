@@ -38,10 +38,11 @@ default y
 
 endif 
 
+
+
 if SHIELD_KIWI36_LEFT || SHIELD_KIWI36_RIGHT 
 
 if ZMK_DISPLAY
-
 
 config ZMK_DISPLAY
     select LV_USE_CONT
@@ -62,22 +63,4 @@ config SSD1306_REVERSE_MODE
 
 endif # ZMK_DISPLAY
 
-
-if LVGL
-
-config LV_Z_VDB_SIZE
-    default 64
-
-config LV_DPI_DEF
-    int
-    default 148
-
-config LV_Z_BITS_PER_PIXEL
-    default 1
-
-choice LV_COLOR_DEPTH
-    default LV_COLOR_DEPTH_1
-endchoice
-
-endif # LVGL
 

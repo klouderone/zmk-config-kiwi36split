@@ -26,8 +26,6 @@ config BT_MAX_PAIRED
 
 endif
 
-
-
 if SHIELD_KIWI36_LEFT || SHIELD_KIWI36_RIGHT || SHIELD_KIWI36_DONGLE 
 
 config ZMK_SPLIT
@@ -37,8 +35,6 @@ config ZMK_BLE
 default y
 
 endif 
-
-
 
 if SHIELD_KIWI36_LEFT || SHIELD_KIWI36_RIGHT 
 

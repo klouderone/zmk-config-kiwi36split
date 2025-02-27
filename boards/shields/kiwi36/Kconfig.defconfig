@@ -36,6 +36,10 @@ default y
 config ZMK_BLE
 default y
 
+endif
+
+if SHIELD_KIWI36_LEFT || SHIELD_KIWI36_RIGHT 
+
 if ZMK_DISPLAY
 
 config ZMK_DISPLAY
